@@ -472,10 +472,229 @@ body {
 @media (max-width: 1220px) {
   .page { padding-inline: 20px; }
   .site-header { padding-inline: 20px; }
-  .hero { padding-left: 20px; }
-  .hero-main { width: 760px; }
+  .hero {
+    padding-left: 24px;
+    padding-right: 8px;
+  }
+  .hero-main { width: min(760px, 100%); }
   .hero-yep { left: 280px; font-size: 160px; }
   .hero-about { left: 490px; }
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    padding-inline: 20px;
+    height: auto;
+    padding-block: 14px;
+    align-items: center;
+  }
+
+  .main-nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .main-nav a { font-size: 16px; }
+
+  .hero {
+    min-height: auto;
+    padding: 34px 0 0;
+    gap: 24px;
+  }
+
+  .hero-main {
+    width: 100%;
+    height: auto;
+    min-height: 620px;
+  }
+
+  .photo-window {
+    left: 30px;
+    width: min(520px, 62vw);
+  }
+
+  .hero-yep {
+    left: min(46vw, 390px);
+    top: -6px;
+    font-size: clamp(120px, 16vw, 168px);
+  }
+
+  .hero-about {
+    left: min(54vw, 560px);
+    top: 460px;
+    width: min(300px, 34vw);
+  }
+
+  .hero-about-title { font-size: 68px; }
+
+  .about-skills {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+    padding-top: 36px;
+  }
+
+  .contacts {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-inline: 14px;
+    padding-bottom: 28px;
+  }
+
+  .site-header {
+    width: 100%;
+    margin-left: 0;
+    position: sticky;
+    padding-inline: 6px;
+    gap: 12px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .logo { font-size: 24px; }
+
+  .main-nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .main-nav a {
+    font-size: 15px;
+    padding: 4px 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding-top: 24px;
+  }
+
+  .hero-main {
+    min-height: 0;
+  }
+
+  .photo-window {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  .portrait { height: 500px; }
+
+  .hero-yep {
+    left: 52%;
+    top: -32px;
+    font-size: clamp(96px, 24vw, 140px);
+    transform: translateX(-6%);
+  }
+
+  .hero-about {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 460px;
+    margin: 14px auto 0;
+    text-align: left;
+  }
+
+  .hero-about-title { font-size: 62px; }
+
+  .hero-kristi { font-size: 28px; }
+
+  .hero-folders {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 4px;
+  }
+
+  .folder {
+    width: calc(33.33% - 8px);
+  }
+
+  .about-skills,
+  .work-style,
+  .contacts {
+    padding-inline: 0;
+  }
+
+  .about-column h2,
+  .skills-column h2 { font-size: 34px; }
+
+  .about-column p,
+  .skills-list li { font-size: 24px; }
+
+  .quote-card {
+    padding: 34px 22px;
+  }
+
+  .quote-card blockquote {
+    font-size: 30px;
+    line-height: 1.18;
+  }
+
+  .contacts {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts-right {
+    text-align: left;
+    font-size: 24px;
+    max-width: 100%;
+  }
+
+  .toast {
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
+  }
+}
+
+@media (max-width: 540px) {
+  .main-nav a { font-size: 14px; }
+
+  .portrait { height: 390px; }
+
+  .hero-about-title { font-size: 54px; }
+
+  .hero-kristi { font-size: 22px; }
+
+  .hero-abel { font-size: 14px; }
+
+  .folder-name {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .about-column h2,
+  .skills-column h2 { font-size: 30px; }
+
+  .about-column p,
+  .skills-list li {
+    font-size: 20px;
+    line-height: 1.14;
+  }
+
+  .skills-list li {
+    margin-bottom: 20px;
+    padding-left: 22px;
+  }
+
+  .quote-card blockquote { font-size: 28px; }
+
+  .contact-value { font-size: 18px; }
+
+  .contacts-right { font-size: 28px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
