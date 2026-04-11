@@ -782,7 +782,7 @@ body {
 
 .surf-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   align-items: start;
 }
@@ -867,6 +867,10 @@ body {
 }
 
 @media (max-width: 900px) {
+  .surf-grid {
+    grid-template-columns: 1fr;
+  }
+
   .work-card.is-vertical,
   .work-card.is-horizontal {
     max-width: 560px;
