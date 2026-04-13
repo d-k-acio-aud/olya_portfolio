@@ -571,6 +571,7 @@ body {
     width: 100%;
     margin-left: 0;
     position: sticky;
+    top: 0;
     padding-inline: 6px;
     gap: 12px;
     align-items: flex-start;
@@ -581,7 +582,8 @@ body {
 
   .main-nav {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
@@ -647,6 +649,10 @@ body {
   .work-style,
   .contacts {
     padding-inline: 0;
+  }
+
+  .about-skills {
+    margin-top: 14px;
   }
 
   .about-column h2,
@@ -873,7 +879,8 @@ body {
 
   .work-card.is-vertical,
   .work-card.is-horizontal {
-    max-width: 560px;
+    width: min(560px, 100%);
+    max-width: 100%;
     grid-template-columns: 1fr;
   }
 
@@ -881,6 +888,18 @@ body {
   .work-card.is-horizontal .work-media {
     aspect-ratio: 9 / 16;
     max-height: min(72vh, 620px);
+  }
+
+  .work-card.is-horizontal .work-media {
+    aspect-ratio: 16 / 9;
+    max-height: min(52vw, 360px);
+  }
+
+  .work-card.is-horizontal .work-media iframe,
+  .work-card.is-horizontal .work-media img,
+  .work-card.is-horizontal .work-media video {
+    object-fit: contain;
+    background: #111;
   }
 }
 
