@@ -882,6 +882,18 @@ body {
     aspect-ratio: 9 / 16;
     max-height: min(72vh, 620px);
   }
+
+  .work-card.is-horizontal .work-media {
+    aspect-ratio: 16 / 9;
+    max-height: min(52vw, 360px);
+  }
+
+  .work-card.is-horizontal .work-media iframe,
+  .work-card.is-horizontal .work-media img,
+  .work-card.is-horizontal .work-media video {
+    object-fit: contain;
+    background: #111;
+  }
 }
 
 @media (max-width: 768px) {
