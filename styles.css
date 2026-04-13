@@ -912,6 +912,11 @@ body {
     padding-top: 34px;
   }
 
+  .work-card.is-vertical .work-media {
+    width: min(100%, 360px);
+    margin-inline: auto;
+  }
+
   .section-text {
     font-size: 18px;
   }
